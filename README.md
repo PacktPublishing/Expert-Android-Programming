@@ -14,8 +14,7 @@ mFabToolbar.setFab(mFab);
 ```
 
 Developers will be required to work with some of the following software:
-Java, Android Studio, IDE
-Firebase
+Java, Android Studio IDE, Firebase
 
 ## Related Products
 * [Reactive Programming for Android [Video]](https://www.packtpub.com/application-development/reactive-programming-android-video?utm_source=github&utm_medium=repository&utm_campaign=9781788626422)
