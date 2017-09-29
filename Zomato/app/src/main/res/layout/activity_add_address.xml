@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar_normal" />
+    <!--User Details-->
+    <com.androcid.zomato.view.custom.StickyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/account_small_medium_txt_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:background="@color/app_bg_color"
+                android:text="DELIVERY AREA"
+                android:tag="sticky"
+                android:textColor="@color/txt_home_subtitle_color" />
+
+            <LinearLayout
+                android:id="@+id/select_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clickable="true"
+                android:onClick="selectLocationClick"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/del_area"
+                        style="@style/account_medium_txt_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:hint="eg. Golf Links" />
+
+                    <TextView
+                        android:id="@+id/del_area_selected"
+                        style="@style/account_small_txt_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/gray_border"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp"
+                        android:text="Change"
+                        android:textColor="@color/txt_home_subtitle_color" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/account_small_medium_txt_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:background="@color/app_bg_color"
+                android:text="DELIVERY ADDRESS"
+                android:tag="sticky"
+                android:textColor="@color/txt_home_subtitle_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/addressHint"
+                        style="@style/account_small_medium_txt_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="COMPLETE ADDRESS" />
+
+                    <EditText
+                        android:id="@+id/address"
+                        style="@style/login_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/addressHint"
+                        android:hint="eg. Hno, street name"
+                        android:inputType="textEmailAddress" />
+
+                    <ImageView
+                        android:id="@+id/addressLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/address"
+                        android:layout_marginTop="5dp"
+                        android:src="@color/gray_7" />
+
+                    <ImageView
+                        android:id="@+id/addressCancel"
+                        style="@style/login_cancel_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/address"
+                        android:onClick="cancelClick" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/instructionHint"
+                        style="@style/account_small_medium_txt_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="INSTRUCTIONS" />
+
+                    <EditText
+                        android:id="@+id/instruction"
+                        style="@style/login_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/instructionHint"
+                        android:hint="eg. beware of dogs"
+                        android:inputType="textEmailAddress" />
+
+                    <ImageView
+                        android:id="@+id/instructionLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/instruction"
+                        android:layout_marginTop="5dp"
+                        android:src="@color/gray_7" />
+
+                    <ImageView
+                        android:id="@+id/instructionCancel"
+                        style="@style/login_cancel_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/instruction"
+                        android:onClick="cancelClick" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/editDescriptionHint"
+                        style="@style/account_small_medium_txt_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Description" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/homeType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/green_selected_border"
+                            android:clickable="true"
+                            android:onClick="typeSelectClick"
+                            android:padding="5dp">
+
+                            <TextView
+                                style="@style/account_small_medium_txt_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="HOME"
+                                android:textColor="@color/check_box_color" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/workType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/green_selected_border"
+                            android:clickable="true"
+                            android:onClick="typeSelectClick"
+                            android:padding="5dp">
+
+                            <TextView
+                                style="@style/account_small_medium_txt_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="WORK"
+                                android:textColor="@color/check_box_color" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/otherType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/green_selected_border"
+                            android:clickable="true"
+                            android:onClick="typeSelectClick"
+                            android:padding="5dp">
+
+                            <TextView
+                                style="@style/account_small_medium_txt_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="OTHER"
+                                android:textColor="@color/check_box_color" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/otherLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="20dp">
+
+                        <EditText
+                            android:id="@+id/otherText"
+                            style="@style/login_edittext_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="eg. Bae's home"
+                            android:inputType="textEmailAddress"
+                            android:padding="5dp" />
+
+                        <ImageView
+                            android:id="@+id/otherTextLine"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/otherText"
+                            android:layout_marginTop="5dp"
+                            android:src="@color/gray_7" />
+
+                        <ImageView
+                            android:id="@+id/otherTextCancel"
+                            style="@style/login_cancel_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/otherText"
+                            android:onClick="cancelClick" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </com.androcid.zomato.view.custom.StickyScrollView>
+<!--
+    <com.androcid.zomato.view.custom.StickyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ScrollView" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="100dip"
+                android:background="#ffff0000" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="100dip"
+                android:background="#ffffff00" />
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="100dip"
+                android:background="#99ff00ff"
+                android:tag="sticky-nonconstant-hastransparancy" >
+
+                <Button
+                    android:id="@+id/mybutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="hello world" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="100dip"
+                android:background="#ffaaff33" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="100dip"
+                android:background="#ff0000ff" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="100dip"
+                android:background="#ff00ffff"
+                android:tag="sticky" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="100dip"
+                android:background="#ffff3333" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="100dip"
+                android:background="#ffffeeee" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="100dip"
+                android:background="#ff0033ff" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="100dip"
+                android:background="#ffcc9922"
+                android:tag="sticky" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="100dip"
+                android:background="#ff333333" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="100dip"
+                android:background="#ffeeeeee"
+                android:tag="sticky" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="100dip"
+                android:background="#ff999999" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="100dip"
+                android:background="#fff322ff" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="100dip"
+                android:background="#ff22ff22" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="100dip"
+                android:background="#ffff0000" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="100dip"
+                android:background="#ffff00ff" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="100dip"
+                android:background="#ff00ffff" />
+        </LinearLayout>
+
+    </com.androcid.zomato.view.custom.StickyScrollView>-->
+
+</LinearLayout>

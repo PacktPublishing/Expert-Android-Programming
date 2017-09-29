@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="5dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="visible">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:foreground="@drawable/place_foreground"
+                android:padding="0dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/placeImage"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:scaleType="centerCrop" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/placeName"
+                            style="@style/FeedTitleTxtStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="User Name" />
+
+                        <TextView
+                            android:id="@+id/placeDescription"
+                            style="@style/FeedSubTitleTxtStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="44 REVIEWS, 88 FOLLOWERS" />
+
+                    </LinearLayout>
+
+                    <com.androcid.zomato.view.custom.TintableImageView
+                        android:id="@+id/followPLace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_bookmark"
+                        app:tint="@color/like_button_color" />
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:paddingLeft="10dp"
+            android:src="@color/app_bg_color" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="visible">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:foreground="@drawable/place_foreground"
+                android:padding="0dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/userImage"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:scaleType="centerCrop" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/userName"
+                            style="@style/FeedTitleTxtStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="User Name" />
+
+                        <TextView
+                            android:id="@+id/userDescription"
+                            style="@style/FeedSubTitleTxtStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="44 REVIEWS, 88 FOLLOWERS" />
+
+                    </LinearLayout>
+
+                    <com.androcid.zomato.view.custom.TintableImageView
+                        android:id="@+id/followUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_bookmark"
+                        app:tint="@color/like_button_color" />
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/createdTime"
+            style="@style/FeedTimeTxtStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:text="22 minutes" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:clickable="true"
+            android:foreground="@drawable/place_foreground"
+            android:padding="0dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="0dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <com.androcid.zomato.view.custom.SelectableRoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_browse_nearby"
+                    app:sriv_border_color="@color/gray_97"
+                    app:sriv_border_width="0dip"
+                    app:sriv_left_bottom_corner_radius="0dp"
+                    app:sriv_left_top_corner_radius="@dimen/card_corner_radius"
+                    app:sriv_right_bottom_corner_radius="0dp"
+                    app:sriv_right_top_corner_radius="@dimen/card_corner_radius" />
+
+                <com.androcid.zomato.view.custom.TintableImageView
+                    android:id="@+id/imageLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="2dp"
+                    android:src="@drawable/heart"
+                    app:tint="@color/bottom_item_color" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:foreground="@drawable/place_foreground"
+                android:padding="0dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.androcid.zomato.view.custom.SquareImageView
+                        android:id="@+id/square1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <com.androcid.zomato.view.custom.SelectableRoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/image1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/square1"
+                        android:layout_alignEnd="@+id/square1"
+                        android:layout_alignLeft="@+id/square1"
+                        android:layout_alignRight="@+id/square1"
+                        android:layout_alignStart="@+id/square1"
+                        android:layout_alignTop="@+id/square1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_browse_nearby"
+                        app:sriv_border_color="@color/gray_97"
+                        app:sriv_border_width="0dip"
+                        app:sriv_left_bottom_corner_radius="0dp"
+                        app:sriv_left_top_corner_radius="@dimen/card_corner_radius"
+                        app:sriv_right_bottom_corner_radius="0dp"
+                        app:sriv_right_top_corner_radius="@dimen/card_corner_radius" />
+
+                    <com.androcid.zomato.view.custom.TintableImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="2dp"
+                        android:src="@drawable/heart"
+                        app:tint="@color/bottom_item_color" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:foreground="@drawable/place_foreground"
+                android:padding="0dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.androcid.zomato.view.custom.SquareImageView
+                        android:id="@+id/square2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <com.androcid.zomato.view.custom.SelectableRoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/image2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/square2"
+                        android:layout_alignEnd="@+id/square2"
+                        android:layout_alignLeft="@+id/square2"
+                        android:layout_alignRight="@+id/square2"
+                        android:layout_alignStart="@+id/square2"
+                        android:layout_alignTop="@+id/square2"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_browse_nearby"
+                        app:sriv_border_color="@color/gray_97"
+                        app:sriv_border_width="0dip"
+                        app:sriv_left_bottom_corner_radius="0dp"
+                        app:sriv_left_top_corner_radius="@dimen/card_corner_radius"
+                        app:sriv_right_bottom_corner_radius="0dp"
+                        app:sriv_right_top_corner_radius="@dimen/card_corner_radius" />
+
+                    <com.androcid.zomato.view.custom.TintableImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="2dp"
+                        android:src="@drawable/heart"
+                        app:tint="@color/bottom_item_color" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:foreground="@drawable/place_foreground"
+                android:padding="0dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.androcid.zomato.view.custom.SquareImageView
+                        android:id="@+id/square3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <com.androcid.zomato.view.custom.SelectableRoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/image3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/square3"
+                        android:layout_alignEnd="@+id/square3"
+                        android:layout_alignLeft="@+id/square3"
+                        android:layout_alignRight="@+id/square3"
+                        android:layout_alignStart="@+id/square3"
+                        android:layout_alignTop="@+id/square3"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_browse_nearby"
+                        app:sriv_border_color="@color/gray_97"
+                        app:sriv_border_width="0dip"
+                        app:sriv_left_bottom_corner_radius="0dp"
+                        app:sriv_left_top_corner_radius="@dimen/card_corner_radius"
+                        app:sriv_right_bottom_corner_radius="0dp"
+                        app:sriv_right_top_corner_radius="@dimen/card_corner_radius" />
+
+                    <com.androcid.zomato.view.custom.TintableImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="2dp"
+                        android:src="@drawable/heart"
+                        app:tint="@color/bottom_item_color" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:foreground="@drawable/place_foreground"
+                android:padding="0dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.androcid.zomato.view.custom.SquareImageView
+                        android:id="@+id/square4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <com.androcid.zomato.view.custom.SelectableRoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/image4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/square4"
+                        android:layout_alignEnd="@+id/square4"
+                        android:layout_alignLeft="@+id/square4"
+                        android:layout_alignRight="@+id/square4"
+                        android:layout_alignStart="@+id/square4"
+                        android:layout_alignTop="@+id/square4"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_browse_nearby"
+                        app:sriv_border_color="@color/gray_97"
+                        app:sriv_border_width="0dip"
+                        app:sriv_left_bottom_corner_radius="0dp"
+                        app:sriv_left_top_corner_radius="@dimen/card_corner_radius"
+                        app:sriv_right_bottom_corner_radius="0dp"
+                        app:sriv_right_top_corner_radius="@dimen/card_corner_radius" />
+
+                    <com.androcid.zomato.view.custom.TintableImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="2dp"
+                        android:src="@drawable/heart"
+                        app:tint="@color/bottom_item_color" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:foreground="@drawable/place_foreground"
+                android:padding="0dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.androcid.zomato.view.custom.SquareImageView
+                        android:id="@+id/square5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <com.androcid.zomato.view.custom.SelectableRoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/image5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/square5"
+                        android:layout_alignEnd="@+id/square5"
+                        android:layout_alignLeft="@+id/square5"
+                        android:layout_alignRight="@+id/square5"
+                        android:layout_alignStart="@+id/square5"
+                        android:layout_alignTop="@+id/square5"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_browse_nearby"
+                        app:sriv_border_color="@color/gray_97"
+                        app:sriv_border_width="0dip"
+                        app:sriv_left_bottom_corner_radius="0dp"
+                        app:sriv_left_top_corner_radius="@dimen/card_corner_radius"
+                        app:sriv_right_bottom_corner_radius="0dp"
+                        app:sriv_right_top_corner_radius="@dimen/card_corner_radius" />
+
+                    <com.androcid.zomato.view.custom.TintableImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="2dp"
+                        android:src="@drawable/heart"
+                        app:tint="@color/bottom_item_color" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/imageLikeCount"
+            style="@style/FeedTimeTxtStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:text="1 Likes 0 Comments" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/drawer_background">
+
+            <LinearLayout
+                android:id="@+id/likeLay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/location_recent_foreground"
+                android:clickable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="15dp">
+
+                    <com.androcid.zomato.view.custom.TintableImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="2dp"
+                        android:src="@drawable/heart"
+                        app:tint="@color/bottom_item_color" />
+
+                    <TextView
+                        style="@style/FeedOptionTxtStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Like" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/commentLay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/location_recent_foreground"
+                android:clickable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="15dp">
+
+                    <com.androcid.zomato.view.custom.TintableImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="2dp"
+                        android:src="@drawable/heart"
+                        app:tint="@color/bottom_item_color" />
+
+                    <TextView
+                        style="@style/FeedOptionTxtStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Comment" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/shareLay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/location_recent_foreground"
+                android:clickable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="15dp">
+
+                    <com.androcid.zomato.view.custom.TintableImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="2dp"
+                        android:src="@drawable/heart"
+                        app:tint="@color/bottom_item_color" />
+
+                    <TextView
+                        style="@style/FeedOptionTxtStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Share" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

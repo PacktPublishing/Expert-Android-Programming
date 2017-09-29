@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_toolbar_account" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--User Details-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ripple_white_option"
+                    android:onClick="myProfileClick"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/userImage"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/profile_img" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/userName"
+                            style="@style/account_larger_txt_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="User Name" />
+
+                        <TextView
+                            style="@style/account_small_medium_txt_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View Dineline"
+                            android:textColor="@color/txt_home_subtitle_color" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Options-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/bookmarks"
+                        android:onClick="onOptionCLick"
+                        style="@style/account_option_layout_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/im_select_location_96" />
+
+                        <TextView
+                            style="@style/account_medium_txt_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bookmarks" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/leaderboard"
+                        android:onClick="onOptionCLick"
+                        style="@style/account_option_layout_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/im_select_location_96" />
+
+                        <TextView
+                            style="@style/account_medium_txt_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Leaderboard" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/notifications"
+                        android:onClick="onOptionCLick"
+                        style="@style/account_option_layout_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/im_select_location_96" />
+
+                        <TextView
+                            style="@style/account_medium_txt_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Notifications" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Online Order-->
+                <TextView
+                    style="@style/account_small_medium_txt_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="ONLINE ORDERS"
+                    android:textColor="@color/txt_home_subtitle_color" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <!--Order History-->
+                    <LinearLayout
+                        android:id="@+id/order_history"
+                        style="@style/account_option_view_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="onlineOrderClick">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:src="@drawable/im_search_72" />
+
+                        <TextView
+                            style="@style/account_medium_txt_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Order History" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="15dp"
+                        android:src="@color/more_background_line" />
+
+                    <!--Favourite Orders-->
+                    <LinearLayout
+                        android:id="@+id/favourite_orders"
+                        style="@style/account_option_view_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="onlineOrderClick">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:src="@drawable/im_search_72" />
+
+                        <TextView
+                            style="@style/account_medium_txt_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Favourite Orders" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="15dp"
+                        android:src="@color/more_background_line" />
+
+                    <!--Chat-->
+                    <LinearLayout
+                        android:id="@+id/chat_support"
+                        style="@style/account_option_view_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="onlineOrderClick">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:src="@drawable/im_search_72" />
+
+                        <TextView
+                            style="@style/account_medium_txt_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Chat with Zomato Support" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="15dp"
+                        android:src="@color/more_background_line" />
+
+                    <!--Payments-->
+                    <LinearLayout
+                        android:id="@+id/payments"
+                        style="@style/account_option_view_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="onlineOrderClick">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:src="@drawable/im_search_72" />
+
+                        <TextView
+                            style="@style/account_medium_txt_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Payments" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="15dp"
+                        android:src="@color/more_background_line" />
+
+                    <!--Address Book-->
+                    <LinearLayout
+                        android:id="@+id/address_book"
+                        style="@style/account_option_view_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="onlineOrderClick">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:src="@drawable/im_search_72" />
+
+                        <TextView
+                            style="@style/account_medium_txt_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Address Book" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="15dp"
+                        android:src="@color/more_background_line" />
+
+                    <!--Credits-->
+                    <LinearLayout
+                        android:id="@+id/zomato_credits"
+                        style="@style/account_option_view_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="onlineOrderClick">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:src="@drawable/im_search_72" />
+
+                        <TextView
+                            style="@style/account_medium_txt_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Zomato Credits" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="15dp"
+                        android:src="@color/more_background_line" />
+
+                    <!--Free Meals-->
+                    <LinearLayout
+                        android:id="@+id/free_meals"
+                        style="@style/account_option_view_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="onlineOrderClick">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:src="@drawable/im_search_72" />
+
+                        <TextView
+                            style="@style/account_medium_txt_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Free Meals" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Profile-->
+                <TextView
+                    style="@style/account_small_medium_txt_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="PROFILE"
+                    android:textColor="@color/txt_home_subtitle_color" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <!--Edit Profile-->
+                    <LinearLayout
+                        android:id="@+id/edit_profile"
+                        style="@style/account_option_view_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="profileClick">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:src="@drawable/im_search_72" />
+
+                        <TextView
+                            style="@style/account_medium_txt_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Edit Profile" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="15dp"
+                        android:src="@color/more_background_line" />
+
+                    <!--Connected Accounts-->
+                    <LinearLayout
+                        android:id="@+id/connected_accounts"
+                        style="@style/account_option_view_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="profileClick">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:src="@drawable/im_search_72" />
+
+                        <TextView
+                            style="@style/account_medium_txt_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Connected Accounts" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="15dp"
+                        android:src="@color/more_background_line" />
+
+                    <!--recent restaurants-->
+                    <LinearLayout
+                        android:id="@+id/recent_restaurants"
+                        style="@style/account_option_view_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="profileClick">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:src="@drawable/im_search_72" />
+
+                        <TextView
+                            style="@style/account_medium_txt_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Recently Viewed Restaurants" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="15dp"
+                        android:src="@color/more_background_line" />
+
+                    <!--Review Drafts-->
+                    <LinearLayout
+                        android:id="@+id/review_drafts"
+                        style="@style/account_option_view_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="profileClick">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:src="@drawable/im_search_72" />
+
+                        <TextView
+                            style="@style/account_medium_txt_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Review Drafts" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Others-->
+                <TextView
+                    style="@style/account_small_medium_txt_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="OTHERS"
+                    android:textColor="@color/txt_home_subtitle_color" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <!--Find Friend Zomato-->
+                    <LinearLayout
+                        android:id="@+id/zomato_friend"
+                        style="@style/account_option_view_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="otherClick">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:src="@drawable/im_search_72" />
+
+                        <TextView
+                            style="@style/account_medium_txt_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Find Friends on Zomato" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="15dp"
+                        android:src="@color/more_background_line" />
+
+                    <!--Invite Zomato-->
+                    <LinearLayout
+                        android:id="@+id/invite_zomato"
+                        style="@style/account_option_view_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="otherClick">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:src="@drawable/im_search_72" />
+
+                        <TextView
+                            style="@style/account_medium_txt_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Invite Friends to Zomato" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="15dp"
+                        android:src="@color/more_background_line" />
+
+                    <!--Add Place-->
+                    <LinearLayout
+                        android:id="@+id/add_place"
+                        style="@style/account_option_view_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="otherClick">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:src="@drawable/im_search_72" />
+
+                        <TextView
+                            style="@style/account_medium_txt_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Add a Place" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="15dp"
+                        android:src="@color/more_background_line" />
+
+                    <!--About-->
+                    <LinearLayout
+                        android:id="@+id/about"
+                        style="@style/account_option_view_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="otherClick">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:src="@drawable/im_search_72" />
+
+                        <TextView
+                            style="@style/account_medium_txt_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="About" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="15dp"
+                        android:src="@color/more_background_line" />
+
+                    <!--Rate Us-->
+                    <LinearLayout
+                        android:id="@+id/rate_us"
+                        style="@style/account_option_view_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="otherClick">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:src="@drawable/im_search_72" />
+
+                        <TextView
+                            style="@style/account_medium_txt_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Rate us on the Play Store" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="15dp"
+                        android:src="@color/more_background_line" />
+
+                    <!--Send Feedback-->
+                    <LinearLayout
+                        android:id="@+id/send_feedback"
+                        style="@style/account_option_view_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="otherClick">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:src="@drawable/im_search_72" />
+
+                        <TextView
+                            style="@style/account_medium_txt_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Send Feedback" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="15dp"
+                        android:src="@color/more_background_line" />
+
+                    <!--Sign Out-->
+                    <LinearLayout
+                        android:id="@+id/sign_out"
+                        style="@style/account_option_view_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="otherClick">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:src="@drawable/im_search_72" />
+
+                        <TextView
+                            style="@style/account_medium_txt_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Sign Out" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--footer-->
+                <include layout="@layout/layout_zomato_footer" />
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <!--Temp View For Bottom Gap-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:orientation="vertical" />
+
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_bottom_bar" />
+
+</RelativeLayout>

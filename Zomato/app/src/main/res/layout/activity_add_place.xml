@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar_normal" />
+    <!--User Details-->
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/restaurantNameHint"
+                        style="@style/account_medium_txt_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RESTAURANT NAME" />
+
+                    <EditText
+                        android:id="@+id/restaurantName"
+                        style="@style/login_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/restaurantNameHint"
+                        android:layout_marginTop="5dp"
+                        android:hint="eg. Hno, street name"
+                        android:inputType="textPersonName" />
+
+                    <ImageView
+                        android:id="@+id/restaurantNameLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/restaurantName"
+                        android:src="@color/gray_7" />
+
+                    <ImageView
+                        android:id="@+id/restaurantNameCancel"
+                        style="@style/login_cancel_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/restaurantName"
+                        android:onClick="cancelClick" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/localityHint"
+                        style="@style/account_medium_txt_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LOCALITY" />
+
+                    <EditText
+                        android:id="@+id/locality"
+                        style="@style/login_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/localityHint"
+                        android:layout_marginTop="5dp"
+                        android:hint="eg. Hno, street name"
+                        android:inputType="textEmailAddress" />
+
+                    <ImageView
+                        android:id="@+id/localityLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/locality"
+                        android:src="@color/gray_7" />
+
+                    <ImageView
+                        android:id="@+id/localityCancel"
+                        style="@style/login_cancel_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/locality"
+                        android:onClick="cancelClick" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/cityHint"
+                        style="@style/account_medium_txt_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CITY" />
+
+                    <EditText
+                        android:id="@+id/city"
+                        style="@style/login_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cityHint"
+                        android:layout_marginTop="5dp"
+                        android:hint="eg. Hno, street name"
+                        android:inputType="textEmailAddress" />
+
+                    <ImageView
+                        android:id="@+id/cityLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/city"
+                        android:src="@color/gray_7" />
+
+                    <ImageView
+                        android:id="@+id/cityCancel"
+                        style="@style/login_cancel_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/city"
+                        android:onClick="cancelClick" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/emailHint"
+                        style="@style/account_medium_txt_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="EMAIL" />
+
+                    <EditText
+                        android:id="@+id/email"
+                        style="@style/login_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/emailHint"
+                        android:layout_marginTop="5dp"
+                        android:hint="eg. Hno, street name"
+                        android:inputType="textEmailAddress" />
+
+                    <ImageView
+                        android:id="@+id/emailLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/email"
+                        android:src="@color/gray_7" />
+
+                    <ImageView
+                        android:id="@+id/emailCancel"
+                        style="@style/login_cancel_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/email"
+                        android:onClick="cancelClick" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/addressHint"
+                        style="@style/account_medium_txt_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ADDITIONAL INFO" />
+
+                    <EditText
+                        android:id="@+id/location"
+                        style="@style/login_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/addressHint"
+                        android:layout_marginTop="5dp"
+                        android:minLines="5"
+                        android:maxLines="5"
+                        android:gravity="top"
+                        android:padding="10dp"
+                        android:background="@color/gray236"
+                        android:hint="eg. Hno, street name"
+                        android:inputType="textMultiLine" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

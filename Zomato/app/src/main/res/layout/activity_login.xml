@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color">
+
+    <!--Login up-->
+    <LinearLayout
+        android:id="@+id/logInLay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_bg_color"
+        android:orientation="vertical">
+
+        <!--ToolBar-->
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:minHeight="?attr/actionBarSize"
+                android:orientation="horizontal">
+
+                <com.androcid.zomato.view.custom.TintableImageView
+                    android:id="@+id/loginClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ripple_white_foreground"
+                    android:clickable="true"
+                    android:onClick="closeClick"
+                    android:padding="10dp"
+                    android:src="@drawable/im_close"
+                    app:tint="@color/close_icon_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Log in"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@drawable/shadow_toolbar" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        style="@style/facebook_button_padded_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="facebookClick">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/com_facebook_button_icon"  />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Continue with Facebook"
+                            android:textColor="@color/white" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/google_button_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="googleClick">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/im_google_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Continue with Google"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/login_or_txt_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_login_with_zomato" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/logEmailHint"
+                            style="@style/login_hint_txt_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Email" />
+
+                        <EditText
+                            android:id="@+id/logEmail"
+                            style="@style/login_edittext_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/logEmailHint"
+                            android:layout_toLeftOf="@+id/logEmailCancel"
+                            android:hint="Email or Username"
+                            android:inputType="textEmailAddress" />
+
+                        <ImageView
+                            android:id="@+id/logEmailLine"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/logEmail"
+                            android:src="@color/gray_7" />
+
+                        <ImageView
+                            android:id="@+id/logEmailCancel"
+                            style="@style/login_cancel_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/logEmail"
+                            android:onClick="cancelClick" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/logPasswordHint"
+                            style="@style/login_hint_txt_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Password" />
+
+                        <EditText
+                            android:id="@+id/logPassword"
+                            style="@style/login_edittext_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/logPasswordHint"
+                            android:layout_toLeftOf="@+id/logPasswordCancel"
+                            android:hint="Password"
+                            android:inputType="textPassword" />
+
+                        <ImageView
+                            android:id="@+id/logPasswordLine"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/logPassword"
+                            android:src="@color/gray_7" />
+
+                        <ImageView
+                            android:id="@+id/logPasswordCancel"
+                            style="@style/login_cancel_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/logPassword"
+                            android:onClick="cancelClick" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/logLogin"
+                        style="@style/sign_in_button_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="logInClick"
+                        android:text="Log in" />
+
+                    <TextView
+                        style="@style/login_forgot_txt_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="forgotPasswordClick"
+                        android:text="@string/txt_forgot_password" />
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/login_footer_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_login_footer" />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

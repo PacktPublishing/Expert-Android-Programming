@@ -1,0 +1,107 @@
+{
+  "project_info": {
+    "project_number": "1035789733376",
+    "firebase_url": "https://zomato-project.firebaseio.com",
+    "project_id": "zomato-project",
+    "storage_bucket": "zomato-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035789733376:android:a9db8e37dc284200",
+        "android_client_info": {
+          "package_name": "com.androcid.zomatoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1035789733376-u4f2t2e2deal392qblnskhaeh5qnvbp4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.androcid.zomatoapp",
+            "certificate_hash": "322533098EF4DB838D0B460E65445B13F072164B"
+          }
+        },
+        {
+          "client_id": "1035789733376-qsplr4rnn5l51vannttp8uktqb6gvg1h.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1035789733376-41e50c7cj059vaccfbm9vupop5vcmrfo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9LzJZlHhoV-5NPtEVDBoTuxflHvIo228"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1035789733376-qsplr4rnn5l51vannttp8uktqb6gvg1h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035789733376:android:fe5b9225f8c9ca3c",
+        "android_client_info": {
+          "package_name": "com.androcid.zomato"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1035789733376-rs6hl3p4v0ouq4j5ivs8hrgd6mrcbi7p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.androcid.zomato",
+            "certificate_hash": "322533098EF4DB838D0B460E65445B13F072164B"
+          }
+        },
+        {
+          "client_id": "1035789733376-qsplr4rnn5l51vannttp8uktqb6gvg1h.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1035789733376-41e50c7cj059vaccfbm9vupop5vcmrfo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9LzJZlHhoV-5NPtEVDBoTuxflHvIo228"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1035789733376-qsplr4rnn5l51vannttp8uktqb6gvg1h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

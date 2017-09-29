@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar_normal" />
+    <!--User Details-->
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/collectionNameHint"
+                        style="@style/account_medium_txt_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="NAME" />
+
+                    <EditText
+                        android:id="@+id/collectionName"
+                        style="@style/login_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/collectionNameHint"
+                        android:hint="eg. Great Breakfast"
+                        android:inputType="textPersonName" />
+
+                    <ImageView
+                        android:id="@+id/collectionNameLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/collectionName"
+                        android:src="@color/gray_7" />
+
+                    <ImageView
+                        android:id="@+id/collectionNameCancel"
+                        style="@style/login_cancel_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/collectionName"
+                        android:onClick="cancelClick" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/descriptionHint"
+                        style="@style/account_medium_txt_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="DESCRIPTION" />
+
+                    <EditText
+                        android:id="@+id/description"
+                        style="@style/login_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/descriptionHint"
+                        android:hint="eg. Best places to go for breakfast"
+                        android:inputType="textEmailAddress" />
+
+                    <ImageView
+                        android:id="@+id/descriptionLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/description"
+                        android:src="@color/gray_7" />
+
+                    <ImageView
+                        android:id="@+id/descriptionCancel"
+                        style="@style/login_cancel_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/description"
+                        android:onClick="cancelClick" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tagHint"
+                        style="@style/account_medium_txt_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="TAGS" />
+
+                    <EditText
+                        android:id="@+id/tag"
+                        style="@style/login_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tagHint"
+                        android:hint="eg. Hno, street name"
+                        android:inputType="textEmailAddress" />
+
+                    <ImageView
+                        android:id="@+id/tagLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/tag"
+                        android:src="@color/gray_7" />
+
+                    <ImageView
+                        android:id="@+id/tagCancel"
+                        style="@style/login_cancel_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/tag"
+                        android:onClick="cancelClick" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ripple_green_button"
+        android:padding="10dp"
+        android:clickable="true"
+        android:onClick="addToCollection"
+        android:gravity="center">
+        <TextView
+            style="@style/account_larger_txt_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,487 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!-- <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+         <item name="colorPrimary">@color/colorPrimary</item>
+         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+         <item name="colorAccent">@color/colorAccent</item>
+     </style>-->
+
+    <style name="MdToolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionMenuTextColor">@color/white</item>
+    </style>
+
+    <style name="AppTheme.Fullscreen" parent="AppTheme"></style>
+
+    <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/black</item>
+        <!--<item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:background">#4CAF50</item>-->
+    </style>
+
+    <!--<item name="tabMaxWidth">@dimen/tab_max_width</item>-->
+    <style name="TabLayoutStyle" parent="android:Widget">
+        <item name="tabIndicatorColor">?attr/colorAccent</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabPaddingStart">12dp</item>
+        <item name="tabPaddingEnd">12dp</item>
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+        <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>
+        <item name="tabSelectedTextColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ToolbarBackArrowRedStyle" parent="AppTheme">
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+
+    <style name="ToolbarTitleAppearance" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18dp</item>
+        <!-- include other attributes you want to change: textColor, textStyle, etc -->
+    </style>
+
+    <style name="ToolbarSubtitleAppearance" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="ToolbarRedStyle">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:theme">@style/ToolbarBackArrowRedStyle</item>
+    </style>
+
+    <style name="ToolbarColoredBackArrow" parent="AppTheme">
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="GreenSeek" parent="Widget.AppCompat.SeekBar">
+        <item name="colorAccent">@color/transparent</item>
+        <item name="colorControlNormal">@color/transparent</item>
+
+    </style>
+
+    <style name="SeekStyle" parent="Widget.AppCompat.SeekBar">
+        <item name="colorAccent">@color/white</item>
+        <item name="colorControlNormal">@color/red</item>
+
+    </style>
+
+    <!--Bottom bar styles-->
+    <style name="BottomBarLayoutStyle">
+        <!--Bottom Layout With ripple on V21 and normal on pre-->
+        <item name="android:background">@drawable/ripple_bottom_bar</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="BottomBarTxtStyle">
+        <!--Bottom Bar text color with selector and fixed 10dp size-->
+        <item name="android:textColor">@color/bottom_item_color</item>
+        <item name="android:textSize">10dp</item>
+    </style>
+
+    <style name="BottomBarImageStyle">
+        <!--Bottom bar Image with selector tint-->
+        <item name="tint">@color/bottom_item_color</item>
+    </style>
+
+    <style name="BottomBarSelectorStyle">
+        <!--Bottom bar selected Indicator Selector drawable-->
+        <item name="android:src">@drawable/bottom_item_selected</item>
+    </style>
+
+    <!--Home Activity-->
+    <style name="HomeTitleTxtStyle">
+        <item name="android:textColor">@color/txt_home_title_color</item>
+        <item name="android:textSize">10dp</item>
+    </style>
+
+    <style name="HomeSubTitleTxtStyle">
+        <item name="android:textColor">@color/txt_home_subtitle_color</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+    <!--Item Horizontal Place-->
+
+    <style name="HorizontalPlaceTitleTxtStyle">
+        <item name="android:textColor">@color/txt_home_title_color</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="HorizontalPlaceLocationTxtStyle">
+        <item name="android:textColor">@color/txt_home_subtitle_color</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="HorizontalPlaceDescriptionTxtStyle">
+        <item name="android:textColor">@color/txt_home_subtitle_color</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="HorizontalPlaceTypeTxtStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:background">@drawable/place_type_bg</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+
+    <style name="VerticalHeaderTitleTxtStyle">
+        <item name="android:textColor">@color/txt_home_title_color</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="VerticalHeaderSubTitleTxtStyle">
+        <item name="android:textColor">@color/txt_home_subtitle_color</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="VerticalHeaderMoreTxtStyle">
+        <item name="android:textColor">@color/bottom_bar_selected_bar_color</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:gravity">right</item>
+    </style>
+
+    <style name="SelectLocationDetectTxtStyle">
+        <item name="android:textColor">@color/app_green</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="SelectLocationSearchTxtStyle">
+        <item name="android:textColor">@color/txt_home_title_color</item>
+        <item name="android:textColorHint">@color/txt_home_subtitle_color</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <!--Browse Nearby-->
+    <style name="PlaceDetailRatingTxtStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="PlaceDetailDistanceTxtStyle">
+        <item name="android:textColor">@color/txt_home_title_color</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="PlaceDetailTitleTxtStyle">
+        <item name="android:textColor">@color/txt_home_subtitle_color</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="PlaceDetailValueTxtStyle">
+        <item name="android:textColor">@color/txt_home_title_color</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <!--Collection Detail-->
+    <style name="CollectionDetailTitleTxt">
+        <item name="android:textColor">@color/txt_home_title_color</item>
+        <item name="android:textSize">22dp</item>
+    </style>
+
+    <style name="CollectionDetailSmallTxt">
+        <item name="android:textColor">@color/txt_home_title_color</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="CollectionItemTitleTxt">
+        <item name="android:textColor">@color/txt_home_title_color</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="CollectionItemSmallTxt">
+        <item name="android:textColor">@color/txt_home_title_color</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="CollectionDetailTxt">
+        <item name="android:textColor">@color/txt_home_subtitle_color</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+
+    <style name="CollectionSaveTxtStyle">
+        <item name="android:textColor">@color/save_button_txt_color</item>
+        <item name="android:background">@drawable/bottom_save_selected</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="PlaceDetailSaveTxtStyle">
+        <item name="android:textColor">@color/save_button_txt_color</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <!--Footer style-->
+    <style name="FooterSmallTxtStyle">
+        <item name="android:textColor">@color/save_button_txt_color</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="FooterBigTxtStyle">
+        <item name="android:textColor">@color/txt_home_subtitle_color</item>
+        <item name="android:textSize">26dp</item>
+    </style>
+
+    <!--Feed-->
+    <style name="FeedTitleTxtStyle">
+        <item name="android:textColor">@color/txt_home_title_color</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="FeedSubTitleTxtStyle">
+        <item name="android:textColor">@color/save_button_txt_color</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="FeedTimeTxtStyle">
+        <item name="android:textColor">@color/save_button_txt_color</item>
+        <item name="android:textSize">10dp</item>
+    </style>
+
+    <style name="FeedTxtStyle">
+        <item name="android:textColor">@color/save_button_txt_color</item>
+        <item name="android:textSize">10dp</item>
+    </style>
+
+    <style name="FeedOptionTxtStyle">
+        <item name="android:textColor">@color/save_button_txt_color</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="login_button_style">
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@drawable/ripple_white_button</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/txt_home_title_color</item>
+    </style>
+
+    <style name="facebook_button_style">
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:background">@drawable/ripple_facebook_button</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="facebook_button_padded_style">
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:background">@drawable/ripple_facebook_button</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="google_button_style">
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:background">@drawable/ripple_google_button</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+
+    <style name="button_style">
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="sign_in_button_style">
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:background">@drawable/ripple_gray_button</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="login_footer_style">
+        <item name="android:gravity">center</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textColor">@color/txt_home_subtitle_color</item>
+    </style>
+
+    <style name="login_start_info_style">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/txt_home_title_color</item>
+    </style>
+
+    <style name="login_or_txt_style">
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textColor">@color/txt_home_subtitle_color</item>
+        <item name="android:layout_marginTop">15dp</item>
+    </style>
+
+    <style name="login_forgot_txt_style">
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/txt_home_subtitle_color</item>
+    </style>
+
+    <style name="login_hint_txt_style">
+        <item name="android:visibility">invisible</item>
+        <item name="android:textColor">@color/txt_home_subtitle_color</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="login_edittext_style">
+        <item name="android:background">@color/transparent</item>
+        <item name="android:textColor">@color/txt_home_title_color</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="login_cancel_button">
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:src">@drawable/im_cancel_48</item>
+    </style>
+
+    <!--Place Details-->
+    <style name="place_detail_image_count_style">
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:background">@drawable/tra_white_border</item>
+        <item name="android:layout_margin">15dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:textColor">@color/txt_home_title_color</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="place_detail_rating_style">
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_marginTop">-15dp</item>
+        <item name="android:background">@drawable/green_round_bg</item>
+        <item name="android:paddingLeft">7dp</item>
+        <item name="android:paddingRight">7dp</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="place_detail_title_style">
+        <item name="android:textSize">22dp</item>
+        <item name="android:textColor">@color/txt_home_title_color</item>
+    </style>
+
+    <style name="place_detail_larger_txt_style">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">@color/txt_home_title_color</item>
+    </style>
+
+    <style name="place_detail_large_txt_style">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/txt_home_title_color</item>
+    </style>
+
+    <style name="place_detail_medium_txt_style">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/txt_home_subtitle_color</item>
+    </style>
+
+    <style name="place_detail_smallmedium_txt_style">
+        <item name="android:textSize">10dp</item>
+        <item name="android:textColor">@color/txt_home_subtitle_color</item>
+    </style>
+
+    <style name="place_detail_small_txt_style">
+        <item name="android:textSize">8dp</item>
+        <item name="android:textColor">@color/txt_home_subtitle_color</item>
+    </style>
+
+    <style name="place_detail_txt_style">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/txt_home_title_color</item>
+    </style>
+
+    <!--Account-->
+    <style name="account_hugh_txt_style">
+        <item name="android:textSize">44dp</item>
+        <item name="android:textColor">@color/txt_home_title_color</item>
+    </style>
+
+    <style name="account_big_txt_style">
+        <item name="android:textSize">26dp</item>
+        <item name="android:textColor">@color/txt_home_title_color</item>
+    </style>
+
+    <style name="account_larger_txt_style">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">@color/txt_home_title_color</item>
+    </style>
+
+    <style name="account_large_txt_style">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/txt_home_title_color</item>
+    </style>
+
+    <style name="account_medium_txt_style">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/txt_home_title_color</item>
+    </style>
+
+    <style name="account_small_medium_txt_style">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/txt_home_title_color</item>
+    </style>
+
+    <style name="account_small_txt_style">
+        <item name="android:textSize">10dp</item>
+        <item name="android:textColor">@color/txt_home_title_color</item>
+    </style>
+
+    <style name="account_tiny_txt_style">
+        <item name="android:textSize">8dp</item>
+        <item name="android:textColor">@color/txt_home_title_color</item>
+    </style>
+
+    <style name="account_option_view_style">
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/ripple_white_option</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="account_option_layout_style">
+        <item name="android:background">@drawable/ripple_white_layout</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_unread"
+        android:icon="@drawable/ic_browse_nearby"
+        android:title="Mark unread"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_copy"
+        android:icon="@drawable/ic_browse_nearby"
+        android:title="Copy"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_google"
+        android:icon="@drawable/ic_browse_nearby"
+        android:title="Google+"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_facebook"
+        android:icon="@drawable/ic_browse_nearby"
+        android:title="Facebook"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_twitter"
+        android:icon="@drawable/ic_browse_nearby"
+        android:title="Twitter"
+        app:showAsAction="ifRoom" />
+</menu>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/google_button_selected">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/google_button_normal" />
+            <corners android:radius="@dimen/card_corner_radius" />
+            <stroke
+                android:width="1dp"
+                android:color="@color/google_button_border" />
+        </shape>
+    </item>
+</ripple>

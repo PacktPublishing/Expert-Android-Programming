@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.androcid.zomato">
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/im_zom_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.SplashActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.login.StartActivity" />
+        <activity
+            android:name=".activity.login.RegisterActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.login.LoginActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity android:name=".activity.HomeActivity" />
+        <activity android:name=".activity.collection.CollectionActivity" />
+        <activity android:name=".activity.FeedActivity" />
+        <activity android:name=".activity.AccountActivity" />
+        <activity android:name=".activity.profile.SetHandleActivity" />
+
+        <activity android:name=".activity.SelectLocationActivity" />
+        <activity android:name=".activity.BrowseNearbyActivity" />
+
+        <activity
+            android:name=".activity.BookmarkActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity android:name=".activity.LeaderBoardActivity" />
+        <activity android:name=".activity.NotificationActivity" />
+        <activity android:name=".activity.address.AddressBookActivity" />
+        <activity android:name=".activity.address.AddAddressActivity" />
+        <activity android:name=".activity.address.SelectDeliveryAreaActivity"/>
+        <activity android:name=".activity.CreditsActivity" />
+        <activity android:name=".activity.FreeMealActivity" />
+
+        <activity android:name=".activity.profile.EditProfileActivity" />
+
+        <activity android:name=".activity.ConnectedAccountsActivity" />
+        <activity android:name=".activity.RecentPlaceActivity" />
+        <activity android:name=".activity.review.ReviewDraftActivity" />
+        <activity android:name=".activity.review.AddReviewActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".activity.review.AllReviewActivity" />
+        <activity android:name=".activity.review.ReviewDetailActivity" />
+
+        <activity android:name=".activity.friend.FindFriendActivity" />
+        <activity android:name=".activity.friend.FriendFacebookActivity" />
+        <activity android:name=".activity.friend.FriendZomatoActivity" />
+
+        <activity android:name=".activity.AddPlaceActivity" />
+        <activity android:name=".activity.profile.UserProfileActivity" />
+        <activity android:name=".activity.profile.FollowerActivity" />
+        <activity android:name=".activity.profile.BeenThereActivity" />
+        <activity android:name=".activity.profile.UserCollectionActivity" />
+
+        <activity android:name=".activity.collection.AddCollectionActivity" />
+        <activity android:name=".activity.collection.AddPlaceToCollectionActivity" />
+
+        <activity android:name=".activity.support.SupportActivity" />
+        <activity android:name=".activity.support.SupportChatActivity" />
+
+        <activity android:name=".activity.PlaceSearchActivity"/>
+
+        <activity android:name=".activity.photos.AllMenuActivity" />
+        <activity android:name=".activity.photos.AllPhotosActivity" />
+        <activity android:name=".activity.photos.PickPhotosActivity" />
+        <activity android:name=".activity.photos.SelectPhotosActivity" />
+        <activity android:name=".activity.photos.CameraActivity"/>
+        <activity android:name=".activity.photos.AddPhotosActivity"/>
+
+        <activity android:name=".activity.NotificationPreferenceActivity" />
+        <activity android:name=".activity.credit.CreditHistoryActivity" />
+
+        <activity android:name=".activity.level.StatisticsActivity" />
+        <activity android:name=".activity.level.AllLevelActivity" />
+
+        <activity
+            android:name=".activity.SearchPlaceActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity android:name=".activity.photos.PhotosPagerActivity"/>
+
+        <activity
+            android:name=".activity.PlaceDetailActivity"
+            android:theme="@style/AppTheme.Fullscreen" />
+        <activity
+            android:name=".activity.collection.CollectionDetailActivity"
+            android:theme="@style/AppTheme.Fullscreen" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".service.UploadImageService"/>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_api_key" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+    </application>
+
+</manifest>

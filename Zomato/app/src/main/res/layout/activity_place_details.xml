@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color">
+
+    <include layout="@layout/content_place_details" />
+
+    <include layout="@layout/layout_toolbar_place_details" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="?actionBarSize"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/ic_add_white_24dp"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_anchor="@id/scrollView"
+        app:layout_anchorGravity="bottom|end" />
+
+    <ImageView
+        android:id="@+id/tra_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:src="@color/tra_gray"
+        android:visibility="invisible" />
+
+    <com.androcid.zomato.view.bottomfab.FooterLayout
+        android:id="@+id/fabtoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        app:ft_color="@color/red"
+        app:ft_container_gravity="center"
+        app:layout_anchor="@id/scrollView"
+        app:layout_anchorGravity="bottom">
+
+        <LinearLayout
+            android:id="@+id/bottomLay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:id="@+id/ratePlace"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_browse_nearby" />
+
+                <TextView
+                    style="@style/HorizontalPlaceDescriptionTxtStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rate this place" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addPhoto"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_menu_add_photo" />
+
+                <TextView
+                    style="@style/HorizontalPlaceDescriptionTxtStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Photos" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addReview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_menu_add_review" />
+
+                <TextView
+                    style="@style/HorizontalPlaceDescriptionTxtStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add a Review" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addCollection"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_menu_add_collection" />
+
+                <TextView
+                    style="@style/HorizontalPlaceDescriptionTxtStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add a Collection" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.androcid.zomato.view.bottomfab.FooterLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

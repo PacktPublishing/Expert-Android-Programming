@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="SmoothCollapsingToolbarLayout">
+    <attr name="sctl_collapsed_offsetX" format="dimension|reference" />
+    <attr name="sctl_collapsed_offsetY" format="dimension|reference" />
+    <attr name="sctl_collapsed_avatarSize" format="dimension|reference" />
+    <attr name="sctl_collapsed_titleTextSize" format="dimension|reference" />
+    <attr name="sctl_collapsed_subtitleTextSize" format="dimension|reference" />
+    <attr name="sctl_expanded_offsetX" format="dimension|reference" />
+    <attr name="sctl_expanded_offsetY" format="dimension|reference" />
+    <attr name="sctl_expanded_avatarSize" format="dimension|reference" />
+    <attr name="sctl_expanded_titleTextSize" format="dimension|reference" />
+    <attr name="sctl_expanded_subtitleTextSize" format="dimension|reference" />
+    <attr name="sctl_avatar_id" format="reference" />
+    <attr name="sctl_title_id" format="reference" />
+    <attr name="sctl_subtitle_id" format="reference" />
+  </declare-styleable>
+</resources>

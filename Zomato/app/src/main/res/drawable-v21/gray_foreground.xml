@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/more_background_selected"
+    android:drawable="@drawable/gray_foreground_selector">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/more_background" />
+        </shape>
+    </item>
+
+</ripple>

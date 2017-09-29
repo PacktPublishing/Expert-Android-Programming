@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">FoodDiscovery</string>
+
+    <string name="facebook_app_id">245305715904691</string>
+    <string name="fb_login_protocol_scheme">fb245305715904691</string>
+
+    <string name="map_api_key">AIzaSyCNS2Ksqh_N3GcpuINeG5fzVV7vBn5G-fY</string>
+
+    <string name="txt_bottom_home">Home</string>
+    <string name="txt_bottom_collection">Collection</string>
+    <string name="txt_bottom_feed">Feed</string>
+    <string name="txt_bottom_account">Account</string>
+    <string name="txt_might_like">You might like...</string>
+    <string name="txt_select_location">Select Location</string>
+    <string name="txt_type_location">Start typing a location</string>
+
+    <string name="txt_login_1"><![CDATA[View <b>menus</b>, <b>photos</b> and <b>reviews</b> for restaurants around you]]></string>
+    <!--<string name="txt_login_1">View <b>menus</b>, <b>photos</b> and <b>reviews</b> for restaurants around you</string>-->
+    <!--<string name="txt_login_1"><![CDATA[View <b>menus</b>, photos and reviews for restaurants around you]]></string>-->
+    <string name="txt_login_2">Explore Collections, our curated lists of top places, based on trends</string>
+    <string name="txt_login_3">Add places you want to visit in the future to your Bookmarks</string>
+    <string name="txt_login_start_footer">We never post unless you tell us to</string>
+    <string name="txt_register_footer">By creating an account, you agree to Food Discovery\'s Terms of Service, Privacy Policy and Content Policies.</string>
+    <string name="txt_login_footer">By logging in you agree to Food Discovery\'s Terms of Service,\nPrivacy Policy and Content Policies.</string>
+    <string name="txt_already_member">Already a member? Log in</string>
+    <string name="txt_login_with_zomato">OR LOG IN USING YOUR FOOD DISCOVERY ACCOUNT</string>
+    <string name="txt_forgot_password">Forgot Password?</string>
+    <string name="error_field_required">This field is required</string>
+
+    <string name="txt_price_per_person">\u20B9 %1$s per person</string>
+    <string name="txt_time_min_order">%1$s mins . \u20B9 %2$s Min Order</string>
+
+    <string name="txt_place_n_save">%1$d Places . %2$d Saves</string>
+
+
+    <string name="txt_price_1">\u20B9</string>
+    <string name="txt_price_2">\u20B9\u20B9</string>
+    <string name="txt_price_3">\u20B9\u20B9\u20B9</string>
+    <string name="txt_price_4">\u20B9\u20B9\u20B9\u20B9</string>
+
+    <string name="txt_restaurant_visit">%1$d Reviews %2$d Bookings %3$d Been there</string>
+    <string name="txt_user_details">%1$d REVIEWS %2$d FOLLOWERS</string>
+    <string name="been_there">Been There</string>
+    <string name="photo">Photo</string>
+    <string name="review">Review</string>
+    <string name="txt_set_handle_details">This will be your unique identity on Food Discovery, and your profile URL will be fooddiscovery.com/your-handle</string>
+    <string name="at_the_rate">\@</string>
+    <string name="txt_set_handle_details_more">Handles can be 4 to 15 characters long, and can contain only letters and numbers. Also you cant change your handle once its set, so choose carefully!</string>
+
+    <string name="txt_footer_fooddiscovery">fooddiscovery</string>
+
+</resources>
