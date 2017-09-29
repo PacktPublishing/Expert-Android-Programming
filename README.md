@@ -14,8 +14,7 @@ mFabToolbar.setFab(mFab);
 ```
 
 Developers will be required to work with some of the following software:
-Java
-Android Studio IDE
+Java, Android Studio, IDE
 Firebase
 
 ## Related Products
