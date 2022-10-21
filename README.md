@@ -23,3 +23,7 @@ Java, Android Studio IDE, Firebase
 
 * [Reactive Android Programming](https://www.packtpub.com/application-development/reactive-android-programming?utm_source=github&utm_medium=repository&utm_campaign=9781787289901)
 
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to download a free PDF copy of this book.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781786468956">https://packt.link/free-ebook/9781786468956 </a> </p>
